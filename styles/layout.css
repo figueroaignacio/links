@@ -1,14 +1,55 @@
+/* Grid background — matches ignaciofigueroa.dev */
+.background {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.background::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
 .background__noise {
   position: absolute;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  opacity: 0.03;
+  opacity: 0.025;
   pointer-events: none;
 }
 
+/* Subtle radial vignette so centre feels lit */
+.background__gradient--1 {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 80% 60% at 50% -10%,
+    rgba(138, 180, 248, 0.04) 0%,
+    transparent 70%
+  );
+}
+
+.background__gradient--2 {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 60% 50% at 50% 110%,
+    rgba(138, 180, 248, 0.02) 0%,
+    transparent 70%
+  );
+}
+
 .linktree {
+  position: relative;
+  z-index: 1;
   width: 100%;
-  max-width: 420px;
+  max-width: 440px;
   display: flex;
   flex-direction: column;
   gap: var(--space-xl);

@@ -10,70 +10,67 @@
 }
 
 .profile__avatar {
-  width: 100px;
-  height: 100px;
+  width: 96px;
+  height: 96px;
   border-radius: var(--radius-full);
-  border: 3px solid var(--color-border);
+  border: 1px solid var(--color-border);
   object-fit: cover;
   transition: var(--transition-normal);
   box-shadow: var(--shadow-lg);
 }
 
 .profile__avatar:hover {
-  transform: scale(1.05);
-  border-color: var(--color-accent-start);
-  box-shadow: var(--shadow-glow);
+  transform: scale(1.04);
+  border-color: rgba(138, 180, 248, 0.3);
+  box-shadow: 0 0 0 4px rgba(138, 180, 248, 0.08), var(--shadow-lg);
 }
 
 .profile__status {
   position: absolute;
   bottom: 4px;
   right: 4px;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   background: linear-gradient(135deg, #22c55e, #16a34a);
-  border: 3px solid var(--color-bg);
+  border: 2px solid var(--color-bg);
   border-radius: var(--radius-full);
-  animation: pulse 2s ease-in-out infinite;
+  animation: pulse 2.5s ease-in-out infinite;
 }
 
 @keyframes pulse {
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.35);
   }
   50% {
-    box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+    box-shadow: 0 0 0 5px rgba(34, 197, 94, 0);
   }
 }
 
+/* Playfair Display for the name — matches ignaciofigueroa.dev headings */
 .profile__name {
-  font-size: 1.75rem;
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.85rem;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.01em;
   margin-bottom: var(--space-xs);
-  background: linear-gradient(
-    135deg,
-    var(--color-text-primary),
-    var(--color-text-secondary)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--foreground);
 }
 
 .profile__role {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--color-accent-start);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.825rem;
+  font-weight: 400;
+  color: var(--muted);
   margin-bottom: var(--space-sm);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
 }
 
 .profile__bio {
   font-size: 0.875rem;
   color: var(--color-text-secondary);
-  max-width: 280px;
+  max-width: 300px;
   margin: 0 auto;
-  line-height: 1.5;
+  line-height: 1.6;
 }

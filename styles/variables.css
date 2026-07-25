@@ -1,16 +1,37 @@
 :root {
-  --color-bg: #0a0a0b;
+  /* Colors — matching ignaciofigueroa.dev */
+  --background: #000000;
+  --foreground: #e5e5e5;
+  --card: #111111;
+  --card-foreground: #e5e5e5;
+  --primary: #8ab4f8;
+  --primary-foreground: #000000;
+  --secondary: #1a1a1a;
+  --secondary-foreground: #e5e5e5;
+  --muted: rgba(255, 255, 255, 0.45);
+  --muted-strong: rgba(255, 255, 255, 0.7);
+  --accent: #1e1f20;
+  --accent-foreground: #8ab4f8;
+  --border: rgba(255, 255, 255, 0.08);
+  --rule: rgba(255, 255, 255, 0.08);
+  --input: #111111;
+  --ring: #8ab4f8;
+  --grid-color: rgba(250, 250, 250, 0.015);
+  --shadow-lg: 0 10px 40px -15px rgba(0, 0, 0, 0.8);
+
+  /* Semantic aliases used in components */
+  --color-bg: var(--background);
   --color-surface: rgba(255, 255, 255, 0.03);
-  --color-surface-hover: rgba(255, 255, 255, 0.06);
-  --color-border: rgba(255, 255, 255, 0.08);
+  --color-surface-hover: rgba(255, 255, 255, 0.055);
+  --color-border: var(--border);
   --color-border-hover: rgba(255, 255, 255, 0.15);
-  --color-text-primary: #fafafa;
-  --color-text-secondary: #a1a1aa;
-  --color-text-muted: #71717a;
-  --color-accent-start: #6366f1;
-  --color-accent-end: #8b5cf6;
-  --color-featured-bg: rgba(99, 102, 241, 0.1);
-  --color-featured-border: rgba(99, 102, 241, 0.3);
+  --color-text-primary: var(--foreground);
+  --color-text-secondary: var(--muted-strong);
+  --color-text-muted: var(--muted);
+  --color-accent-start: var(--primary);
+  --color-accent-end: #a8c8ff;
+  --color-featured-bg: rgba(138, 180, 248, 0.06);
+  --color-featured-border: rgba(138, 180, 248, 0.18);
 
   /* Spacing */
   --space-xs: 0.25rem;
@@ -21,9 +42,9 @@
   --space-2xl: 3rem;
 
   /* Border Radius */
-  --radius-sm: 0.5rem;
-  --radius-md: 0.75rem;
-  --radius-lg: 1rem;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
   --radius-full: 9999px;
 
   /* Transitions */
@@ -32,8 +53,7 @@
   --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.15);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 30px rgba(138, 180, 248, 0.08);
 }
